@@ -1,0 +1,582 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    overflow-x: hidden;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #2a2a2a;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #b388ff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #b388ff;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: #b388ff;
+}
+
+.hero-content p {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.hero-content button {
+    padding: 15px 30px;
+    background-color: #b388ff;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: #9b59b6;
+    transform: scale(1.05);
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #b388ff;
+}
+
+.stat p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.hero-decor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero-decor .circle {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(179, 136, 255, 0.2);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 3s infinite ease-in-out;
+}
+
+.hero-decor .line {
+    width: 2px;
+    height: 50px;
+    background-color: #b388ff;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+}
+
+/* Challenges Section */
+.challenges {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.challenges h2 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #b388ff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #9b59b6;
+    transform: scale(1.05);
+}
+
+/* Courses Section */
+.courses {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.courses h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.course-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.course {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.course:hover {
+    transform: translateY(-10px);
+}
+
+.course h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.course p {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.course button {
+    padding: 10px 20px;
+    background-color: #b388ff;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.course button:hover {
+    background-color: #9b59b6;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.testimonial-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.testimonial p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: 100px 50px;
+    text-align: center;
+    background-color: #b388ff;
+}
+
+.newsletter h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.newsletter p {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.newsletter input,
+.newsletter textarea {
+    padding: 15px;
+    width: 350px;
+    max-width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.newsletter textarea {
+    height: 100px;
+    resize: none;
+}
+
+.newsletter button {
+    padding: 15px 30px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #2a2a2a;
+}
+
+/* Footer */
+footer {
+    padding: 50px;
+    background-color: #2a2a2a;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links div {
+    text-align: left;
+}
+
+.footer-links h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #b388ff;
+}
+
+.footer-links input {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-links button {
+    padding: 10px 20px;
+    background-color: #b388ff;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.footer-links button:hover {
+    background-color: #9b59b6;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    nav {
+        padding: 20px 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 80px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+
+    .hero-stats {
+        gap: 30px;
+    }
+
+    .stat h3 {
+        font-size: 28px;
+    }
+
+    .challenges h2 {
+        font-size: 48px;
+    }
+
+    .courses h2,
+    .testimonials h2,
+    .newsletter h2 {
+        font-size: 36px;
+    }
+
+    .course,
+    .testimonial {
+        width: 220px;
+    }
+
+    .newsletter input,
+    .newsletter textarea {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 150px 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 60px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .challenges h2 {
+        font-size: 36px;
+    }
+
+    .courses h2,
+    .testimonials h2,
+    .newsletter h2 {
+        font-size: 28px;
+    }
+
+    .course,
+    .testimonial {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .newsletter input,
+    .newsletter textarea {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-links div {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-content button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .challenges h2 {
+        font-size: 28px;
+    }
+
+    .courses h2,
+    .testimonials h2,
+    .newsletter h2 {
+        font-size: 24px;
+    }
+
+    .newsletter {
+        padding: 50px 20px;
+    }
+}   
+
+.course,
+.testimonial {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.course.visible,
+.testimonial.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
