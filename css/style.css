@@ -28,6 +28,13 @@ nav .logo {
     color: #b388ff;
 }
 
+.burger-menu {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -45,6 +52,7 @@ nav ul li a {
 nav ul li a:hover {
     color: #b388ff;
 }
+
 
 /* Hero Section */
 .hero {
@@ -273,10 +281,11 @@ nav ul li a:hover {
 .testimonial {
     background-color: #2a2a2a;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 50% 50% 10px 10px;
     width: 300px;
     text-align: left;
     transition: transform 0.3s ease;
+    text-align: center;
 }
 
 .testimonial:hover {
@@ -286,6 +295,7 @@ nav ul li a:hover {
 .testimonial img {
     border-radius: 50%;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .testimonial h4 {
@@ -335,6 +345,7 @@ nav ul li a:hover {
     border: none;
     border-radius: 5px;
     font-size: 14px;
+    outline: none;
 }
 
 .newsletter textarea {
@@ -449,6 +460,9 @@ footer {
         font-size: 28px;
     }
 
+    .challenges {
+        padding-top: 0;
+    }
     .challenges h2 {
         font-size: 48px;
     }
@@ -471,13 +485,25 @@ footer {
 }
 
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 20px;
+    .burger-menu {
+        display: block;
     }
-
     nav ul {
-        gap: 15px;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #2a2a2a;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+    }
+    nav ul.active {
+        max-height: 300px; /* Yetarlicha katta qiymat qo‘ydik */
+        padding-bottom: 20px;
     }
 
     .hero {
