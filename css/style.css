@@ -10,16 +10,20 @@ body {
     color: #fff;
     overflow-x: hidden;
 }
-nav {
+nav{
+    background-color: #2a2a2a;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+nav .container{
+    max-width: 1400px;
     display: flex;
+    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: #2a2a2a;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
 }
 
 nav .logo {
@@ -414,6 +418,7 @@ footer {
     border: none;
     border-radius: 5px;
     margin-bottom: 10px;
+    outline: none;
 }
 
 .footer-links button {
